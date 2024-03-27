@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Members</h1>
+    <table border="1px solid black">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+      </tr>
+      {% for x in my_members %}
+      <tr>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone }}</td>
+        <td>{{ x.date_of_birth }}</td>
+        <td>{{ x.address }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
