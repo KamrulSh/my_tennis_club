@@ -7,3 +7,5 @@ class Member(models.Model):
     email = models.EmailField(max_length=30)
     phone = models.CharField(max_length=15)
     date_of_birth = models.DateField()
+    member_id = models.PositiveIntegerField(null=True)
+    address = models.CharField(max_length=100)

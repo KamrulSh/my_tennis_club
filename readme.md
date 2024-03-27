@@ -44,3 +44,22 @@ for x in members_list:
 
 Member.objects.all().values()
 ```
+
+### Django Update Data
+
+```python
+x = Member.objects.all()[0]
+x.phone = '9876543210'
+x.save()
+```
+
+### Django Delate Data
+
+```python
+x = Member.objects.all()[2]
+x.delete()
+```
+
+### Django Update Model
+
+To add a field to a table after it is created, need to make changes in `models.py` and then need to update migrations.
