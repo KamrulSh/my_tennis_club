@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>{{ member.first_name }} {{ member.last_name }}</h1>
-    <h3>Member ID: {{ member.member_id }}</h3>
-    <p>Phone: {{ member.phone }}</p>
-    <p>Email: {{ member.email }}</p>
-    <p>DoB: {{ member.date_of_birth }}</p>
-    <p>Address: {{ member.address }}</p>
+{% extends "master.html" %} {% block title %} My Tennis Club - List of all
+members {% endblock %} {% block content %}
 
-    <p>Back to <a href="/members">Members</a></p>
-  </body>
-</html>
+<h1>{{ member.first_name }} {{ member.last_name }}</h1>
+<h3>Member ID: {{ member.member_id }}</h3>
+<p>Phone: {{ member.phone }}</p>
+<p>Email: {{ member.email }}</p>
+<p>DoB: {{ member.date_of_birth }}</p>
+<p>Address: {{ member.address }}</p>
+
+<p>Back to <a href="/members">Members</a></p>
+{% endblock %}

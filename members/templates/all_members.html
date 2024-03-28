@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>All Members List</h1>
-    <table border="1px solid black">
-      <tr>
-        <th>Name</th>
-        <th>M-ID</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Date of Birth</th>
-        <th>Address</th>
-      </tr>
-      {% for x in my_members %}
-      <tr>
-        <td>
-          <a href="details/{{x.id}}" /> {{ x.first_name }} {{ x.last_name }}
-        </td>
-        <td>{{ x.member_id }}</td>
-        <td>{{ x.email }}</td>
-        <td>{{ x.phone }}</td>
-        <td>{{ x.date_of_birth }}</td>
-        <td>{{ x.address }}</td>
-      </tr>
-      {% endfor %}
-    </table>
-  </body>
-</html>
+{% extends "master.html" %} {% block title %} My Tennis Club - List of all
+members {% endblock %} {% block content %}
+<h1>All Members List</h1>
+<table border="1px solid black">
+  <tr>
+    <th>Name</th>
+    <th>M-ID</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Date of Birth</th>
+    <th>Address</th>
+  </tr>
+  {% for x in my_members %}
+  <tr>
+    <td><a href="details/{{x.id}}" /> {{ x.first_name }} {{ x.last_name }}</td>
+    <td>{{ x.member_id }}</td>
+    <td>{{ x.email }}</td>
+    <td>{{ x.phone }}</td>
+    <td>{{ x.date_of_birth }}</td>
+    <td>{{ x.address }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
